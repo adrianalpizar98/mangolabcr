@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mango Lab CR | Chill Fashion & Smart Branding</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mango: {
+                            orange: '#F59E0B',
+                            dark: '#D97706',
+                            light: '#FEF3C7'
+                        },
+                        turq: {
+                            DEFAULT: '#06B6D4',
+                            dark: '#0891B2',
+                            light: '#CFFAFE'
+                        },
+                        darkbg: '#121212',
+                        cardbg: '#1E1E1E'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-darkbg text-gray-100 antialiased selection:bg-turq selection:text-darkbg">
+
+    <!-- Barra de Anuncio Superior -->
+    <div class="bg-gradient-to-r from-turq-dark to-turq text-darkbg font-semibold text-center text-xs md:text-sm py-2 px-4 shadow-md" data-i18n="announcement">
+        🚀 Envíos a todo Costa Rica | 🎨 Producción en Serigrafía y DTF al por mayor y detalle
+    </div>
+
+    <!-- Header / Navegación -->
+    <header class="sticky top-0 z-50 bg-darkbg/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-turq shadow-lg group-hover:scale-105 transition-transform bg-white">
+                    <img src="imgs/Logo.jpeg" alt="Mango Lab Logo" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight text-white block leading-none">Mango Lab</span>
+                    <span class="text-xs text-turq font-medium">Chill fashion & Smart branding</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#inicio" class="hover:text-turq transition-colors" data-i18n="nav_home">Inicio</a>
+                <a href="#tienda" class="hover:text-turq transition-colors" data-i18n="nav_store">Diseños Disponibles</a>
+                <a href="#servicios" class="hover:text-turq transition-colors" data-i18n="nav_services">Serigrafía & DTF</a>
+                <a href="#cotizador" class="hover:text-turq transition-colors" data-i18n="nav_calc">Calculadora</a>
+                <a href="#contacto" class="hover:text-turq transition-colors" data-i18n="nav_contact">Contacto</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <!-- Botón Switcher ES / ENG -->
+                <button id="lang-switch" class="bg-cardbg border border-gray-700 text-turq font-bold px-3 py-1.5 rounded-full text-xs hover:bg-turq hover:text-darkbg transition-colors flex items-center gap-1.5">
+                    <i class="fas fa-globe"></i> <span id="lang-text">ENG</span>
+                </button>
+
+                <a href="https://www.instagram.com/mangolabcr/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-cardbg border border-gray-700 flex items-center justify-center hover:bg-turq hover:text-darkbg transition-colors">
+                    <i class="fab fa-instagram text-lg"></i>
+                </a>
+                <a href="https://wa.me/50688760064" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-turq to-turq-dark text-darkbg font-bold px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity shadow-lg text-sm">
+                    <i class="fab fa-whatsapp text-base"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="relative overflow-hidden py-20 lg:py-32 bg-gradient-to-b from-darkbg via-[#1a1814] to-darkbg border-b border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-cardbg border border-gray-700 px-4 py-1.5 rounded-full text-xs font-semibold text-mango-orange">
+                        <i class="fas fa-bolt text-mango-orange"></i> <span data-i18n="hero_badge">Taller Textil & Serigrafía Profesional en Costa Rica</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                        <span data-i18n="hero_title_1">Lleva tu estilo y tu marca al</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-turq to-turq-light" data-i18n="hero_title_2">siguiente nivel</span>
+                    </h1>
+                    <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0" data-i18n="hero_desc">
+                        Creamos apparel con diseños únicos y ofrecemos producción textil profesional con serigrafía de alta durabilidad e impresión digital DTF sin límites de color.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#tienda" class="w-full sm:w-auto bg-turq text-darkbg font-bold px-8 py-4 rounded-xl hover:bg-turq-dark transition-colors text-center shadow-lg shadow-turq/20" data-i18n="btn_store">
+                            Ver Diseños Disponibles
+                        </a>
+                        <a href="#servicios" class="w-full sm:w-auto bg-cardbg border border-gray-700 text-white font-semibold px-8 py-4 rounded-xl hover:border-turq transition-colors text-center inline-flex items-center justify-center gap-2" data-i18n="btn_services">
+                            <i class="fas fa-layer-group text-turq"></i> Ver Métodos y Precios
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md rounded-2xl overflow-hidden border-2 border-gray-700 shadow-2xl bg-cardbg">
+                        <video autoplay muted loop playsinline class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity">
+                            <source src="imgs/WhatsApp Video 2026-08-23 at 8.26.48 AM.mp4" type="video/mp4">
+                            Tu navegador no soporta videos HTML5.
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkbg/80 via-transparent to-transparent flex items-end p-6 pointer-events-none">
+                            <div class="text-left">
+                                <span class="text-xs bg-turq text-darkbg font-bold px-2.5 py-1 rounded-md uppercase" data-i18n="video_tag">Taller</span>
+                                <h3 class="text-lg font-bold text-white mt-2">@mangolabcr en Acción</h3>
+                                <p class="text-xs text-gray-300" data-i18n="video_desc">Calidad garantizada en cada prenda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tienda de Diseños Disponibles -->
+        <section id="tienda" class="py-20 bg-darkbg max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4"><span data-i18n="store_title">Colección de Diseños</span> <span class="text-turq">Mango Lab</span></h2>
+                <p class="text-gray-400 text-sm sm:text-base"><span data-i18n="store_desc">Prendas con estampados exclusivos, alta calidad de confección y estilo urbano listo para usar. Precio fijo:</span> <strong class="text-turq">₡17,500</strong>.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Diseño 1: IZAN - Blessed -->
+                <article class="bg-cardbg rounded-2xl overflow-hidden border border-gray-800 hover:border-turq transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="product-img-crop product-img-container">
+                            <span class="absolute top-3 left-3 z-20 bg-darkbg/80 backdrop-blur-md text-turq text-xs font-bold px-3 py-1 rounded-full border border-gray-700" data-i18n="tag_special">Edición Especial</span>
+                            <img src="imgs/5.jpeg" alt="IZAN - Blessed Frente" class="transition-opacity duration-500 absolute inset-0 img-front">
+                            <img src="imgs/2.jpeg" alt="IZAN - Blessed Hover" class="transition-opacity duration-500 absolute inset-0 img-back opacity-0 group-hover:opacity-100">
+                            <span class="absolute bottom-3 right-3 z-20 bg-darkbg/80 text-[10px] text-gray-300 px-2 py-1 rounded-md border border-gray-700 pointer-events-none">Frente / Hover</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-white">IZAN - Blessed</h3>
+                                <span class="text-turq font-extrabold text-lg">₡17,500</span>
+                            </div>
+                            <p class="text-gray-400 text-xs mb-4" data-i18n="p1_desc">Diseño exclusivo de alta durabilidad y estilo urbano.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-800">
+                            <span class="text-xs text-gray-400" data-i18n="sizes">Tallas: S, M, L, XL</span>
+                            <a href="https://wa.me/50688760064?text=Hola,%20me%20interesa%20el%20dise%C3%B1o%20IZAN%20-%20Blessed%20(%E2%82%A117,500)" target="_blank" rel="noopener noreferrer" class="bg-turq/10 text-turq hover:bg-turq hover:text-darkbg text-xs font-bold px-4 py-2 rounded-lg transition-colors" data-i18n="btn_wa">
+                                Pedir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Diseño 2: IZAN - Authentic -->
+                <article class="bg-cardbg rounded-2xl overflow-hidden border border-gray-800 hover:border-turq transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="product-img-crop product-img-container">
+                            <span class="absolute top-3 left-3 z-20 bg-darkbg/80 backdrop-blur-md text-mango-orange text-xs font-bold px-3 py-1 rounded-full border border-gray-700" data-i18n="tag_coffee">Edición Especial</span>
+                            <img src="imgs/10.jpeg" alt="IZAN - Authentic Frente" class="transition-opacity duration-500 absolute inset-0 img-front">
+                            <img src="imgs/9.jpeg" alt="IZAN - Authentic Hover" class="transition-opacity duration-500 absolute inset-0 img-back opacity-0 group-hover:opacity-100">
+                            <span class="absolute bottom-3 right-3 z-20 bg-darkbg/80 text-[10px] text-gray-300 px-2 py-1 rounded-md border border-gray-700 pointer-events-none">Frente / Hover</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-white">IZAN - Authentic</h3>
+                                <span class="text-turq font-extrabold text-lg">₡17,500</span>
+                            </div>
+                            <p class="text-gray-400 text-xs mb-4" data-i18n="p2_desc">Estampado en alta definición con detalles únicos.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-800">
+                            <span class="text-xs text-gray-400" data-i18n="sizes">Tallas: S, M, L, XL</span>
+                            <a href="https://wa.me/50688760064?text=Hola,%20me%20interesa%20el%20dise%C3%B1o%20IZAN%20-%20Authentic%20(%E2%82%A117,500)" target="_blank" rel="noopener noreferrer" class="bg-turq/10 text-turq hover:bg-turq hover:text-darkbg text-xs font-bold px-4 py-2 rounded-lg transition-colors" data-i18n="btn_wa">
+                                Pedir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Diseño 3: IZAN - Wigned Angelic -->
+                <article class="bg-cardbg rounded-2xl overflow-hidden border border-gray-800 hover:border-turq transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="product-img-crop product-img-container">
+                            <span class="absolute top-3 left-3 z-20 bg-darkbg/80 backdrop-blur-md text-turq text-xs font-bold px-3 py-1 rounded-full border border-gray-700">Apparel</span>
+                            <img src="imgs/14.jpeg" alt="IZAN - Wigned Angelic Frente" class="transition-opacity duration-500 absolute inset-0 img-front">
+                            <img src="imgs/13.jpeg" alt="IZAN - Wigned Angelic Hover" class="transition-opacity duration-500 absolute inset-0 img-back opacity-0 group-hover:opacity-100">
+                            <span class="absolute bottom-3 right-3 z-20 bg-darkbg/80 text-[10px] text-gray-300 px-2 py-1 rounded-md border border-gray-700 pointer-events-none">Frente / Hover</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-white">IZAN - Wigned Angelic</h3>
+                                <span class="text-turq font-extrabold text-lg">₡17,500</span>
+                            </div>
+                            <p class="text-gray-400 text-xs mb-4" data-i18n="p3_desc">Diseño original, estilo retro y cómodo.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-800">
+                            <span class="text-xs text-gray-400" data-i18n="sizes">Tallas: S, M, L, XL</span>
+                            <a href="https://wa.me/50688760064?text=Hola,%20me%20interesa%20el%20dise%C3%B1o%20IZAN%20-%20Wigned%20Angelic%20(%E2%82%A117,500)" target="_blank" rel="noopener noreferrer" class="bg-turq/10 text-turq hover:bg-turq hover:text-darkbg text-xs font-bold px-4 py-2 rounded-lg transition-colors" data-i18n="btn_wa">
+                                Pedir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Diseño 4: IZAN - Moon (IZN Culture Premium) -->
+                <article class="bg-cardbg rounded-2xl overflow-hidden border border-gray-800 hover:border-turq transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="product-img-crop product-img-container">
+                            <span class="absolute top-3 left-3 z-20 bg-darkbg/80 backdrop-blur-md text-mango-orange text-xs font-bold px-3 py-1 rounded-full border border-gray-700" data-i18n="tag_local">Premium</span>
+                            <img src="imgs/20.jpeg" alt="IZAN - Moon Frente" class="transition-opacity duration-500 absolute inset-0 img-front">
+                            <img src="imgs/19.jpeg" alt="IZAN - Moon Hover" class="transition-opacity duration-500 absolute inset-0 img-back opacity-0 group-hover:opacity-100">
+                            <span class="absolute bottom-3 right-3 z-20 bg-darkbg/80 text-[10px] text-gray-300 px-2 py-1 rounded-md border border-gray-700 pointer-events-none">Frente / Hover</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-white">IZAN - Moon (IZN Culture Premium)</h3>
+                                <span class="text-turq font-extrabold text-lg">₡20,000</span>
+                            </div>
+                            <p class="text-gray-400 text-xs mb-4" data-i18n="p4_desc">Colección exclusiva IZN Culture.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-800">
+                            <span class="text-xs text-gray-400" data-i18n="sizes">Tallas: S, M, L, XL</span>
+                            <a href="https://wa.me/50688760064?text=Hola,%20me%20interesa%20el%20dise%C3%B1o%20IZAN%20-%20Moon%20(%E2%82%A117,500)" target="_blank" rel="noopener noreferrer" class="bg-turq/10 text-turq hover:bg-turq hover:text-darkbg text-xs font-bold px-4 py-2 rounded-lg transition-colors" data-i18n="btn_wa">
+                                Pedir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Diseño 5: IZAN - The Soul -->
+                <article class="bg-cardbg rounded-2xl overflow-hidden border border-gray-800 hover:border-turq transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="product-img-crop product-img-container">
+                            <span class="absolute top-3 left-3 z-20 bg-darkbg/80 backdrop-blur-md text-turq text-xs font-bold px-3 py-1 rounded-full border border-gray-700">Soul</span>
+                            <img src="imgs/22.jpeg" alt="IZAN - The Soul Frente" class="transition-opacity duration-500 absolute inset-0 img-front">
+                            <img src="imgs/21.jpeg" alt="IZAN - The Soul Hover" class="transition-opacity duration-500 absolute inset-0 img-back opacity-0 group-hover:opacity-100">
+                            <span class="absolute bottom-3 right-3 z-20 bg-darkbg/80 text-[10px] text-gray-300 px-2 py-1 rounded-md border border-gray-700 pointer-events-none">Frente / Hover</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-white">IZAN - The Soul</h3>
+                                <span class="text-turq font-extrabold text-lg">₡17,500</span>
+                            </div>
+                            <p class="text-gray-400 text-xs mb-4" data-i18n="p5_desc">Estilo único con detalles artísticos definidos.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-800">
+                            <span class="text-xs text-gray-400" data-i18n="sizes">Tallas: S, M, L, XL</span>
+                            <a href="https://wa.me/50688760064?text=Hola,%20me%20interesa%20el%20dise%C3%B1o%20IZAN%20-%20The%20Soul%20(%E2%82%A117,500)" target="_blank" rel="noopener noreferrer" class="bg-turq/10 text-turq hover:bg-turq hover:text-darkbg text-xs font-bold px-4 py-2 rounded-lg transition-colors" data-i18n="btn_wa">
+                                Pedir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Diseño 6: IZAN - The Chaos Area (IZN Culture Premium) -->
+                <article class="bg-cardbg rounded-2xl overflow-hidden border border-gray-800 hover:border-turq transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="product-img-crop product-img-container">
+                            <span class="absolute top-3 left-3 z-20 bg-darkbg/80 backdrop-blur-md text-mango-orange text-xs font-bold px-3 py-1 rounded-full border border-gray-700">Chaos</span>
+                            <img src="imgs/23.jpeg" alt="IZAN - The Chaos Area Frente" class="transition-opacity duration-500 absolute inset-0 img-front">
+                            <img src="imgs/25.jpeg" alt="IZAN - The Chaos Area Hover" class="transition-opacity duration-500 absolute inset-0 img-back opacity-0 group-hover:opacity-100">
+                            <span class="absolute bottom-3 right-3 z-20 bg-darkbg/80 text-[10px] text-gray-300 px-2 py-1 rounded-md border border-gray-700 pointer-events-none">Frente / Hover</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-white">IZAN - The CHaos Area (IZN Culture Premium)</h3>
+                                <span class="text-turq font-extrabold text-lg">₡20,000</span>
+                            </div>
+                            <p class="text-gray-400 text-xs mb-4" data-i18n="p6_desc">Diseño exclusivo de la línea culture premium.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-800">
+                            <span class="text-xs text-gray-400" data-i18n="sizes">Tallas: S, M, L, XL</span>
+                            <a href="https://wa.me/50688760064?text=Hola,%20me%20interesa%20el%20dise%C3%B1o%20IZAN%20-%20The%20CHaos%20Area%20(%E2%82%A117,500)" target="_blank" rel="noopener noreferrer" class="bg-turq/10 text-turq hover:bg-turq hover:text-darkbg text-xs font-bold px-4 py-2 rounded-lg transition-colors" data-i18n="btn_wa">
+                                Pedir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Servicios y Precios (Serigrafía y DTF) -->
+        <section id="servicios" class="py-20 bg-[#161616] border-y border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-turq font-bold text-xs uppercase tracking-widest bg-turq/10 px-3 py-1 rounded-full border border-turq/20" data-i18n="serv_badge">B2B & Emprendedores</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-3 mb-4" data-i18n="serv_title">Servicios de Serigrafía y DTF al Por Mayor</h2>
+                    <p class="text-gray-400 text-sm sm:text-base" data-i18n="serv_desc">Equipa tu marca de ropa, gimnasio, evento o empresa con la mejor calidad de impresión en Costa Rica.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <!-- Tarjeta Serigrafía -->
+                    <div class="bg-cardbg rounded-3xl p-8 border border-gray-800 relative overflow-hidden flex flex-col justify-between shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-12 h-12 rounded-2xl bg-mango-orange/10 border border-mango-orange/30 flex items-center justify-center text-mango-orange text-xl font-bold">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                                <span class="text-xs font-semibold bg-mango-orange/20 text-mango-orange px-3 py-1 rounded-full" data-i18n="seri_tag">Alta Durabilidad</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2" data-i18n="seri_title">Serigrafía Textil</h3>
+                            <p class="text-gray-400 text-xs mb-6" data-i18n="seri_desc">Ideal para pedidos por volumen con excelente relación costo-beneficio.</p>
+                            
+                            <div class="bg-darkbg/60 rounded-2xl p-5 mb-6 border border-gray-800 space-y-3">
+                                <div class="flex justify-between items-center pb-3 border-b border-gray-800 text-sm">
+                                    <span class="text-gray-300 font-medium" data-i18n="seri_tier1">100 unidades</span>
+                                    <span class="text-turq font-bold">₡5,500 c/u</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-gray-800 text-sm">
+                                    <span class="text-gray-300 font-medium" data-i18n="seri_tier2">300 unidades</span>
+                                    <span class="text-turq font-bold">₡5,000 c/u</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-gray-300 font-medium" data-i18n="seri_tier3">+300 unidades</span>
+                                    <span class="text-turq font-bold">₡4,500 c/u</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-turq/5 border border-turq/20 rounded-2xl p-4 mb-6">
+                                <p class="text-xs font-bold text-turq mb-2"><i class="fas fa-check-circle mr-1"></i> <span data-i18n="seri_inc">Incluye en el precio:</span></p>
+                                <ul class="text-xs text-gray-300 space-y-1 pl-4 list-disc">
+                                    <li data-i18n="seri_li1">Prenda de alta calidad</li>
+                                    <li data-i18n="seri_li2">1 impresión pequeña (10 cm) a un color</li>
+                                    <li data-i18n="seri_li3">1 impresión grande (hasta 32 x 27 cm) a un color</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a href="#cotizador" class="w-full bg-mango-orange text-darkbg font-bold py-3.5 rounded-xl hover:bg-mango-dark transition-colors text-center text-sm shadow-lg" data-i18n="btn_quote_seri">
+                            Cotizar Serigrafía
+                        </a>
+                    </div>
+
+                    <!-- Tarjeta DTF -->
+                    <div class="bg-cardbg rounded-3xl p-8 border border-gray-800 relative overflow-hidden flex flex-col justify-between shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-12 h-12 rounded-2xl bg-turq/10 border border-turq/30 flex items-center justify-center text-turq text-xl font-bold">
+                                    <i class="fas fa-print"></i>
+                                </div>
+                                <span class="text-xs font-semibold bg-turq/20 text-turq px-3 py-1 rounded-full" data-i18n="dtf_tag">Sin Límites de Color</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2" data-i18n="dtf_title">Impresión Digital DTF</h3>
+                            <p class="text-gray-400 text-xs mb-6" data-i18n="dtf_desc">Perfecto para tirajes cortos o diseños con full color, degradados y sin restricciones.</p>
+                            
+                            <div class="bg-darkbg/60 rounded-2xl p-5 mb-6 border border-gray-800 space-y-3">
+                                <div class="flex justify-between items-center pb-3 border-b border-gray-800 text-sm">
+                                    <span class="text-gray-300 font-medium">1 - 5 unidades</span>
+                                    <span class="text-turq font-bold">₡10,000 c/u</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-gray-800 text-sm">
+                                    <span class="text-gray-300 font-medium">6 - 10 unidades</span>
+                                    <span class="text-turq font-bold">₡8,000 c/u</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-gray-800 text-sm">
+                                    <span class="text-gray-300 font-medium">10 - 30 unidades</span>
+                                    <span class="text-turq font-bold">₡7,000 c/u</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-gray-300 font-medium">30 - 100 unidades</span>
+                                    <span class="text-turq font-bold">₡6,000 c/u</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-turq/5 border border-turq/20 rounded-2xl p-4 mb-6">
+                                <p class="text-xs font-bold text-turq mb-2"><i class="fas fa-check-circle mr-1"></i> <span data-i18n="dtf_adv">Ventajas DTF:</span></p>
+                                <ul class="text-xs text-gray-300 space-y-1 pl-4 list-disc">
+                                    <li data-i18n="dtf_li1">Impresión digital de alta definición</li>
+                                    <li data-i18n="dtf_li2">Sin restricciones de colores o degradados</li>
+                                    <li data-i18n="dtf_li3">Ideal para muestras y pedidos pequeños</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a href="#cotizador" class="w-full bg-turq text-darkbg font-bold py-3.5 rounded-xl hover:bg-turq-dark transition-colors text-center text-sm shadow-lg" data-i18n="btn_quote_dtf">
+                            Cotizar DTF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculadora Interactiva de Precios -->
+        <section id="cotizador" class="py-20 bg-darkbg max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-cardbg rounded-3xl p-8 sm:p-12 border border-gray-800 shadow-2xl">
+                <div class="text-center mb-10">
+                    <span class="text-turq text-xs font-bold uppercase tracking-widest bg-turq/10 px-3 py-1 rounded-full" data-i18n="calc_badge">Herramienta Interactiva</span>
+                    <h2 class="text-3xl font-bold mt-3 mb-2" data-i18n="calc_title">Calculadora Rápida de Precios</h2>
+                    <p class="text-gray-400 text-sm" data-i18n="calc_desc">Selecciona el método y la cantidad para estimar tu presupuesto al instante.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="calc-method" class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2" data-i18n="calc_method_label">Método de Impresión</label>
+                            <select id="calc-method" class="w-full bg-darkbg border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-turq">
+                                <option value="serigrafia" data-i18n="opt_seri">Serigrafía (Volumen)</option>
+                                <option value="dtf" data-i18n="opt_dtf">DTF (Digital sin límites)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="calc-qty" class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2" data-i18n="calc_qty_label">Cantidad de Prendas</label>
+                            <input type="number" id="calc-qty" min="1" value="100" class="w-full bg-darkbg border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-turq">
+                        </div>
+                    </div>
+
+                    <div class="bg-darkbg rounded-2xl p-6 border border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div>
+                            <p class="text-xs text-gray-400" data-i18n="calc_unit_price">Precio estimado por unidad:</p>
+                            <p id="calc-unit-price" class="text-2xl font-extrabold text-turq">₡5,500</p>
+                        </div>
+                        <div class="text-center sm:text-right">
+                            <p class="text-xs text-gray-400" data-i18n="calc_total_price">Total estimado:</p>
+                            <p id="calc-total-price" class="text-3xl font-black text-white">₡550,000</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 text-center">
+                        <a id="whatsapp-quote-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-gradient-to-r from-turq to-turq-dark text-darkbg font-bold px-8 py-4 rounded-xl hover:opacity-95 transition-opacity shadow-lg inline-flex items-center justify-center gap-2 mx-auto">
+                            <i class="fab fa-whatsapp text-lg"></i> <span data-i18n="btn_quote_wa">Enviar esta cotización por WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-[#0f0f0f] border-t border-gray-800 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div class="space-y-4 md:col-span-2">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full overflow-hidden border border-turq bg-white">
+                        <img src="imgs/Logo_2.jpeg" alt="Logo" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-lg font-bold text-white">Mango Lab CR</span>
+                </div>
+                <p class="text-gray-400 text-xs sm:text-sm max-w-sm" data-i18n="footer_desc">
+                    Chill fashion & Smart branding. Soluciones textiles profesionales, serigrafía y DTF de alta calidad en Costa Rica.
+                </p>
+                <p class="text-gray-500 text-xs italic max-w-sm pt-1" data-i18n="footer_legal">
+                    Una división operativa respaldada por Solvifex Holding Group. Facturación registrada bajo Adrian Alpizar Bermudez.
+                </p>
+                <div class="flex items-center gap-3 pt-2">
+                    <a href="https://www.instagram.com/mangolabcr/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-cardbg border border-gray-700 flex items-center justify-center hover:bg-turq hover:text-darkbg transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/50688760064" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-cardbg border border-gray-700 flex items-center justify-center hover:bg-turq hover:text-darkbg transition-colors">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4" data-i18n="footer_links_title">Enlaces Rápidos</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#inicio" class="hover:text-turq transition-colors" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="#tienda" class="hover:text-turq transition-colors" data-i18n="nav_store">Diseños Disponibles</a></li>
+                    <li><a href="#servicios" class="hover:text-turq transition-colors" data-i18n="nav_services">Serigrafía & DTF</a></li>
+                    <li><a href="#cotizador" class="hover:text-turq transition-colors" data-i18n="nav_calc">Calculadora</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4" data-i18n="footer_pay_title">Métodos de Pago</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><i class="fas fa-mobile-alt text-turq mr-2"></i> SINPE Móvil</li>
+                    <li><i class="fas fa-university text-turq mr-2"></i> <span data-i18n="pay_transfer">Transferencia Bancaria</span></li>
+                    <li><i class="fas fa-money-bill-wave text-turq mr-2"></i> <span data-i18n="pay_cash">Efectivo / Anticipo</span></li>
+                </ul>
+                <div class="mt-4 pt-4 border-t border-gray-800">
+                    <p class="text-xs text-gray-500">Costa Rica 🇨🇷</p>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-gray-800/60 text-center text-xs text-gray-500" data-i18n="footer_copy">
+            &copy; 2026 Mango Lab CR. Todos los derechos reservados. Sitio web demostrativo.
+        </div>
+    </footer>
+
+    <!-- Script principal independiente -->
+    <script src="js/main.js"></script>
+</body>
+</html>
