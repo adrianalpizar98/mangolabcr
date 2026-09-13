@@ -210,8 +210,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const total = qty * unitPrice;
         
-        unitPriceEl.textContent = '?' + unitPrice.toLocaleString('es-CR');
-        totalPriceEl.textContent = '?' + total.toLocaleString('es-CR');
+        unitPriceEl.textContent = '\u20A1' + unitPrice.toLocaleString('es-CR');
+        totalPriceEl.textContent = '\u20A1' + total.toLocaleString('es-CR');
 
         const msgText = currentLang === 'es' 
             ? `Hola Mango Lab! Quisiera cotizar ${qty} unidades por ${method.toUpperCase()}. Precio estimado: ?${total.toLocaleString('es-CR')}.`
